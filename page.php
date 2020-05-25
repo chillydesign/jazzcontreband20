@@ -16,6 +16,12 @@
 				<div class="container" id="main_section">
 					<div class="row">
 						<div class="col-sm-4">
+
+							<br>
+							<br>
+							<br>
+							<br>
+							<br>
 							<div class="black_box">
 								<h3>Contact</h3>
 								<hr>
