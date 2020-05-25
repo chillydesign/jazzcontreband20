@@ -58,4 +58,6 @@
 
 	</nav>
 
-	<header></header>
+	<header>
+		<a href="<?php echo home_url(); ?>">Jazzcontreband</a>
+	</header>
