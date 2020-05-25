@@ -32,16 +32,18 @@
 						<div class="col-sm-8">
 							<div class="white_box">
 								<?php the_content(); ?>
+
+								<?php include('section-loop.php'); ?>
+								<?php if (have_rows('galleries')) get_template_part('gallery_content'); ?>
+								<?php if (have_rows('press')) get_template_part('press_content'); ?>
+							<?php endif; ?>
 							</div>
 						</div>
 					</div>
 				</div>
 
 
-				<?php include('section-loop.php'); ?>
-				<?php if (have_rows('galleries')) get_template_part('gallery_content'); ?>
-				<?php if (have_rows('press')) get_template_part('press_content'); ?>
-			<?php endif; ?>
+
 
 
 
