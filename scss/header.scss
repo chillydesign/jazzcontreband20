@@ -112,7 +112,7 @@ nav {
 
         @media (min-width: $mobile_width) {
           position: absolute;
-          top: 47px;
+          top: 43px;
           width: 200px;
           display: none;
           text-align: left;
@@ -126,10 +126,9 @@ nav {
               background: $yellow;
               font-size: 90%;
               padding: 10px;
+              color: black;
 
-              @media (min-width: $mobile_width) {
-                color: white;
-              }
+
 
               &:hover {
                 background: darken($yellow, 10);
