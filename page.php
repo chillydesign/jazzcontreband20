@@ -15,14 +15,14 @@
 
 				<div class="container" id="main_section">
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-sm-4 sticky">
 
 							<br>
 							<br>
 							<br>
 							<br>
 							<br>
-							<div class="black_box sticky_box">
+							<div class="black_box ">
 								<h3>Contact</h3>
 								<hr>
 								<p>+33 33 123 3234789</p>
