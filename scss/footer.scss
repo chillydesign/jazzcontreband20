@@ -4,6 +4,7 @@ footer {
   margin: 0;
   padding: 110px 0 0px;
   position: relative;
+  z-index: -1;
 
   p {
     padding: 0 0 30px;
@@ -35,6 +36,10 @@ footer {
   .footer_top {
     border-bottom: solid 1px white;
     margin-bottom: 20px;
+    background: #ffed00;
+    padding-top: 0;
+    color: black;
+    margin-top: -180px;
 
     p {
       text-align: left;

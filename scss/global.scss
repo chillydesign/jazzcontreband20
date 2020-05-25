@@ -110,7 +110,8 @@ body {
 .black_box,
 .black_event {
   background: $black;
-  color: white;
+  color: $yellow;
+  margin-bottom: 40px;
 
   .bordered_title,
   h1 {
@@ -118,7 +119,8 @@ body {
   }
 
   hr {
-    border-bottom-color: white;
+    border-bottom-color: $yellow;
+    border-style: dashed;
   }
 
   a,
