@@ -29,9 +29,9 @@
 								<hr>
 								<p><a href="www.esplanadedulac.fr" target="_blank">www.esplanadedulac.fr</a></p>
 								<hr>
-								181, Avenue de la Plage <br>
+								<p>181, Avenue de la Plage <br>
 								01220 Divonne-les-Bains <br>
-								France
+								France</p>
 								<hr>
 							</div>
 
