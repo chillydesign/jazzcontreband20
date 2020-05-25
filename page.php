@@ -13,7 +13,7 @@
 		<article id="post-<?php the_ID(); ?>">
 			<?php if (!post_password_required($post)) : ?>
 
-				<div class="container">
+				<div class="container" id="main_section">
 					<div class="row">
 						<div class="col-sm-4">&nbsp;</div>
 						<div class="col-sm-8">
