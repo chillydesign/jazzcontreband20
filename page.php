@@ -15,7 +15,14 @@
 
 				<div class="container" id="main_section">
 					<div class="row">
-						<div class="col-sm-4">&nbsp;</div>
+						<div class="col-sm-4">
+							<div class="black_box">
+								<h3>Contact</h3>
+								<hr>
+								<p>+33 33 123 3234789</p>
+							</div>
+
+						</div>
 						<div class="col-sm-8">
 							<div class="white_box">
 								<?php the_content(); ?>
