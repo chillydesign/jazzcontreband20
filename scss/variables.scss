@@ -1,0 +1,49 @@
+$light_grey: #efefef;
+$medium_grey: #b4b4b4;
+$dark_grey: #444;
+
+$yellow: #ffda31;
+$black: #000000;
+
+$primary_color: $yellow;
+$brand_color: $yellow;
+$brand_color_hover: darken($yellow, 30);
+
+$font_stack: "Messina Sans", "Roboto", sans-serif;
+$heading_font_stack: $font_stack;
+$font_size: 1.65em;
+$font_color: #222;
+
+$border_radius: 10px;
+
+$transition_time: 0.3s;
+
+$mobile_width: 768px;
+$tablet_width: 992px;
+
+@keyframes unBlur {
+  from {
+    filter: grayscale(1) blur(100px);
+  }
+  to {
+    filter: grayscale(1) blur(0px);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}
