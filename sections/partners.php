@@ -1,6 +1,6 @@
 <div id="partner_logos">
 
-	<div style="max-width: 80%; width:80%;margin:auto; padding: 0 30px;position:relative">
+	<div style="max-width: 100%; width:100%;margin:auto; padding: 0 30px;position:relative">
 <ul id="partner_slider">
 
 
