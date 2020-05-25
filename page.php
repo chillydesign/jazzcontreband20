@@ -22,7 +22,7 @@
 							<br>
 							<br>
 							<br>
-							<div class="black_box">
+							<div class="black_box sticky_box">
 								<h3>Contact</h3>
 								<hr>
 								<p>+33 33 123 3234789</p>
