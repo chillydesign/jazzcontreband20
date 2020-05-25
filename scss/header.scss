@@ -127,6 +127,10 @@ nav {
               font-size: 90%;
               padding: 10px;
 
+              @media (min-width: $mobile_width) {
+                color: white;
+              }
+
               &:hover {
                 background: darken($yellow, 10);
               }
