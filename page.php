@@ -26,6 +26,13 @@
 								<h3>Contact</h3>
 								<hr>
 								<p>+33 33 123 3234789</p>
+								<hr>
+								<p><a href="www.esplanadedulac.fr" target="_blank">www.esplanadedulac.fr</a></p>
+								<hr>
+								181, Avenue de la Plage <br>
+								01220 Divonne-les-Bains <br>
+								France
+								<hr>
 							</div>
 
 						</div>
