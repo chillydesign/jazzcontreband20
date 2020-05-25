@@ -126,9 +126,14 @@ nav {
               background: $yellow;
               font-size: 90%;
               padding: 10px;
-              color: black;
 
+              &:link,
+              &:active,
+              &:hover,
+              &:visited {
+                color: black;
 
+              }
 
               &:hover {
                 background: darken($yellow, 10);
