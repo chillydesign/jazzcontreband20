@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'gt_alpinalight';
+    src: url('../fonts/gt-alpina-standard-light-webfont.woff2') format('woff2'),
+         url('../fonts/gt-alpina-standard-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 @import "./variables";
 @import "./reset";
 
