@@ -24,25 +24,6 @@ $events =   new WP_Query(array(
 
 ?>
 
-<header>
-  <div class="container">
-    <div class="column_container">
-      <div class="column small_column">
-        <?php get_template_part('partials/logo'); ?>
-      </div>
-      <div class="column big_column" id="date_box_container">
-        <div id="date_box">01.-27.10.20 CH/FR</div>
-      </div>
-    </div>
-
-
-  </div>
-
-
-  <div class=""></div>
-  <?php $image_url = ($image) ? $image['sizes']['large']  : $tdu . '/img/jazz_photo_1.jpg'; ?>
-  <div id="header_background" style="background-image:url('<?php echo $image_url; ?>');"></div>
-</header>
 
 <div class="container">
   <div class="column_container column_container_reversed">
