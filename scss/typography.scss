@@ -19,7 +19,7 @@ h2 {
   padding: 0 0 30px;
   font-weight: bold;
   @media (min-width: $mobile_width) {
-    font-size: 3.5em;
+    font-size: 6.5em;
   }
 }
 
@@ -169,5 +169,11 @@ iframe {
   width: 100%;
   height: auto;
   min-height: 300px;
+  margin: 0 0 20px;
+}
+
+img {
+  width: 100%;
+  height: auto;
   margin: 0 0 20px;
 }
