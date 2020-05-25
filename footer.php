@@ -1,8 +1,3 @@
-
-
-
-
-
 <!-- footer -->
 <footer class="footer" role="contentinfo">
 
@@ -23,16 +18,16 @@
           <div class="col-sm-4 form_col">
             <div class="inf-content">
               <div class="inf-input inf-input-text">
-                <input type="text" name="inf[2]" data-inf-meta = "2" data-inf-error = "Merci de renseigner une chaine de caractère" placeholder="Prénom" >
+                <input type="text" name="inf[2]" data-inf-meta="2" data-inf-error="Merci de renseigner une chaine de caractère" placeholder="Prénom">
               </div>
               <div class="inf-input inf-input-text">
-                <input type="text" name="inf[3]" data-inf-meta = "3" data-inf-error = "Merci de renseigner une chaine de caractère" placeholder="Nom" >
+                <input type="text" name="inf[3]" data-inf-meta="3" data-inf-error="Merci de renseigner une chaine de caractère" placeholder="Nom">
               </div>
             </div>
           </div>
           <div class="col-sm-4 form_col">
             <div class="inf-input inf-input-text">
-              <input type="text" name="inf[1]" data-inf-meta = "1" data-inf-error = "Merci de renseigner une adresse email" required="required" placeholder="Email" >
+              <input type="text" name="inf[1]" data-inf-meta="1" data-inf-error="Merci de renseigner une adresse email" required="required" placeholder="Email">
             </div>
             <div class="inf-submit"> <input class="button" type="submit" name="" value="S'inscrire">
             </div>
@@ -44,18 +39,18 @@
   <div class="container">
 
     <p>
-      &copy; <?php echo date('Y'); ?>  <?php bloginfo('name'); ?> | Website by <a href="//webfactor.ch" title="Webfactor">Webfactor</a>
+      &copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> | Website by <a href="//webfactor.ch" title="Webfactor">Webfactor</a>
 
       <?php if (is_user_logged_in()) : ?>
         | <a class="logout" href="<?php echo wp_logout_url(site_url('/')); ?>">Déconnexion</a>
-      <?php else: ?>
+      <?php else : ?>
         | <a class="login" href="<?php echo  site_url('/login'); ?>">Connexion Membres</a>
       <?php endif; ?>
     </p>
 
   </div>
 
-  			<div class="stripes_top"></div>
+
   <div id="footer_bg"></div>
 </footer>
 <!-- /footer -->
@@ -94,9 +89,10 @@
         <div class="login_fields">
           <?php do_action('login_form', 'resetpass'); ?>
           <input type="submit" name="user-submit" value="<?php _e('Réinitialiser mon mot de passe'); ?>" class="user-submit" tabindex="1002" />
-          <?php $reset = $_GET['reset']; if ($reset == true) {
-    echo '<p>Un message a été envoyé sur votre adresse email.</p>';
-} ?>
+          <?php $reset = $_GET['reset'];
+          if ($reset == true) {
+            echo '<p>Un message a été envoyé sur votre adresse email.</p>';
+          } ?>
           <input type="hidden" name="redirect_to" value="<?php echo esc_attr($_SERVER['REQUEST_URI']); ?>?reset=true" />
           <input type="hidden" name="user-cookie" value="1" />
         </div>
@@ -108,7 +104,7 @@
 
 
 
-<?php $tdu  =  get_template_directory_uri() ; ?>
+<?php $tdu  =  get_template_directory_uri(); ?>
 
 <script type="text/javascript" src="<?php echo $tdu; ?>/js/lib/underscore-min.js"></script>
 <script type="text/javascript" src="<?php echo $tdu; ?>/js/lib/moment.min.js"></script>
@@ -124,13 +120,17 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114588276-1"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
+  window.dataLayer = window.dataLayer || [];
 
-gtag('config', 'UA-114588276-1');
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114588276-1');
 </script>
 
 
 </body>
+
 </html>

@@ -36,7 +36,7 @@
 
 
 <%  if ( events.length == 0 ) { %>
-		<li class="reperage_box stripes">
+		<li class="reperage_box ">
 		<h3>Aucun évènement trouvé</h3>
 		</li>
 <% } %>
