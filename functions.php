@@ -65,22 +65,22 @@ function webfactor_nav()
 {
     wp_nav_menu(
         array(
-        'theme_location'  => 'header-menu',
-        'menu'            => '',
-        'container'       => 'div',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '<ul>%3$s</ul>',
-        'depth'           => 0,
-        'walker'          => ''
+            'theme_location'  => 'header-menu',
+            'menu'            => '',
+            'container'       => 'div',
+            'container_class' => 'menu-{menu slug}-container',
+            'container_id'    => '',
+            'menu_class'      => 'menu',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul>%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => ''
         )
     );
 }
@@ -95,7 +95,7 @@ function webfactor_header_scripts()
 {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
-       // wp_deregister_script( 'jquery' );
+        // wp_deregister_script( 'jquery' );
 
 
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
@@ -316,34 +316,34 @@ function webfactorcomments($comment, $args, $depth)
     } ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
     <<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ('div' != $args['style']) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) {
-        echo get_avatar($comment, $args['180']);
-    } ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
-<?php endif; ?>
+        <?php if ('div' != $args['style']) : ?>
+            <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+            <?php endif; ?>
+            <div class="comment-author vcard">
+                <?php if ($args['avatar_size'] != 0) {
+                    echo get_avatar($comment, $args['180']);
+                } ?>
+                <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+            </div>
+            <?php if ($comment->comment_approved == '0') : ?>
+                <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+                <br />
+            <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
-		<?php
-            printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
-	</div>
+            <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
+                    <?php
+                    printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
+            </div>
 
-	<?php comment_text() ?>
+            <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ('div' != $args['style']) : ?>
-	</div>
-	<?php endif; ?>
-<?php
+            <div class="reply">
+                <?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+            </div>
+            <?php if ('div' != $args['style']) : ?>
+            </div>
+        <?php endif; ?>
+    <?php
 }
 
 /*------------------------------------*\
@@ -428,22 +428,22 @@ function chilly_nav($menu)
 {
     wp_nav_menu(
         array(
-        'theme_location'  => $menu,
-        'menu'            => '',
-        'container'       => 'div',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '%3$s',
-        'depth'           => 0,
-        'walker'          => ''
+            'theme_location'  => $menu,
+            'menu'            => '',
+            'container'       => 'div',
+            'container_class' => 'menu-{menu slug}-container',
+            'container_id'    => '',
+            'menu_class'      => 'menu',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '%3$s',
+            'depth'           => 0,
+            'walker'          => ''
         )
     );
 }
@@ -467,7 +467,7 @@ add_shortcode('chilly_map', 'chilly_map');
 function disable_wp_emojicons()
 {
 
-  // all actions related to emojis
+    // all actions related to emojis
     remove_action('admin_print_styles', 'print_emoji_styles');
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
@@ -477,7 +477,7 @@ function disable_wp_emojicons()
     remove_filter('comment_text_rss', 'wp_staticize_emoji');
 
     // filter to remove TinyMCE emojis
-  // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+    // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 add_action('init', 'disable_wp_emojicons');
 
@@ -499,7 +499,7 @@ function remove_json_api()
     // Remove oEmbed-specific JavaScript from the front-end and back-end.
     remove_action('wp_head', 'wp_oembed_add_host_js');
     // Remove all embeds rewrite rules.
-  // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
+    // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
 }
 add_action('after_setup_theme', 'remove_json_api');
 
@@ -524,7 +524,7 @@ function count_to_bootstrap_class($count)
     return $class;
 };
 
-function thumbnail_of_post_url($post_id, $size='large')
+function thumbnail_of_post_url($post_id, $size = 'large')
 {
     $image_id = get_post_thumbnail_id($post_id);
     $image_url = wp_get_attachment_image_src($image_id, $size);
@@ -552,7 +552,7 @@ add_filter('the_password_form', 'custom_password_form');
 function custom_password_form()
 {
     global $post;
-    $label = 'pwbox-'.(empty($post->ID) ? rand() : $post->ID);
+    $label = 'pwbox-' . (empty($post->ID) ? rand() : $post->ID);
     $o = '<form class="protected-post-form" action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '"
  method="post">
     ' . __("<section class=\"section  section_colonnes\"><div class=\"container section1col\"><div class=\"column_container\"><div class=\"sectioncol col-sm-12 white colnmb1\"><div class=\"content\"><h1 style=\"text-align: center;margin-bottom:40px;\">Espace Presse</h1></div></div></div></div></section><section class=\"section  section_colonnes yellow_box\" style=\"padding-top:50px;\"><div class=\"container section2col\"><div class=\"column_container\"><div class=\"sectioncol column stripes colnmb1\" style=\"height: 569px;\"><div class=\"title\"><h2><strong>CONNEXION</strong></a></h2></div><div class=\"content\"><p style = \"margin-botton:-10px\">Pour accéder à l’espace presse, merci d’entrer le mot de passe :</p>") . '
@@ -612,16 +612,16 @@ acf_add_options_page($args);
 
 function nice_event_dates($dates)
 {
-  var_dump($dates);
+
     if (sizeof($dates) == 0) {
         return '-';
     } elseif (sizeof($dates) == 1) {
-        $nice_date =  strftime('%l <br> %d.%m.%Y', strtotime(current($dates[0])));
+        $nice_date =  strftime('%A <br> %d.%m.%Y', strtotime(current($dates[0])));
         return $nice_date;
     } else {
         $first = current($dates);
         $last = end($dates);
-        $nice_first =  strftime('%d', strtotime(current($first)));
+        $nice_first =  strftime('%a %d', strtotime(current($first)));
         $nice_last =  strftime('%d.%m.%Y', strtotime(current($last)));
         return $nice_first . ' → '  . $nice_last;
     }
@@ -633,4 +633,4 @@ $color_classes = ['yellow_box', 'black_box', 'grey_box'];
 $ccc = 0;
 
 
-?>
+    ?>
