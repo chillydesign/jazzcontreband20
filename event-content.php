@@ -109,7 +109,7 @@
           <?php endif; ?>
 
           <?php if($ticketing_link) : ?>
-              <span class="colleft"><h4>Billetterie en ligne</h4></span><span class="colright"><a href="<?php echo $ticketing_link; ?>" target="_blank">ici</a></span>
+              <h4><span class="colleft">Billetterie en ligne</span><span class="colright"><a href="<?php echo $ticketing_link; ?>" target="_blank" style="text-decoration:underline">ici</a></span></h4>
 
           <?php endif; ?>
 
