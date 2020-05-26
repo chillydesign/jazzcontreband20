@@ -16,7 +16,7 @@
 \*------------------------------------*/
 
 
-setlocale(LC_ALL, 'fr');
+setlocale(LC_ALL, 'fr_FR.UTF8',  'fr_FR',  'fr');
 
 
 if (!isset($content_width)) {
