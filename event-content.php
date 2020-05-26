@@ -11,6 +11,7 @@
 <?php $tarif_passe_partout_jcb = get_field('tarif_passe-partout_jcb'); ?>
 <?php $styles = get_field('styles'); ?>
 <?php $time = get_field('time'); ?>
+<?php $time_door_opens = get_field('time_door_opens'); ?>
 <?php $artist_name = get_field('artist_name'); ?>
 <?php $description = get_field('description'); ?>
 <?php $lineup = get_field('line-up'); ?>
@@ -44,7 +45,7 @@
                    <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
               </h4>
-              <br>
+              <hr>
               <?php endif; // end of if members ?>
             <?php else : ?>
               <?php if (!empty($members)) : ?>
@@ -52,9 +53,23 @@
                 <a href="<?php echo $members->guid; ?>" target="salle">
                 <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
+              </h4>
+              <hr>
               <?php endif; // end of if members ?>
             <?php endif; //end of if venur_name ?>
 
+            <?php if($time OR $time_door_opens): ?>
+              <p>
+                <?php if($time_door_opens) : ?>
+                    <span class="colleft">Ouverture des portes</span><span class="colright"><?php echo $time_door_opens; ?>
+                <?php endif; ?>
+                <?php if($time) : ?>
+                    <span class="colleft">Début des concerts</span><span class="colright"><?php echo $time; ?>
+                <?php endif; ?>
+
+              </p>
+              <hr>
+            <?php endif; ?>
 
         </div>
 
