@@ -615,13 +615,13 @@ function nice_event_dates($dates)
     if (sizeof($dates) == 0) {
         return '-';
     } elseif (sizeof($dates) == 1) {
-        $nice_date =  strftime('%d.%m', strtotime(current($dates[0])));
+        $nice_date =  strftime('%l <br> %d.%m.%y', strtotime(current($dates[0])));
         return $nice_date;
     } else {
         $first = current($dates);
         $last = end($dates);
         $nice_first =  strftime('%d', strtotime(current($first)));
-        $nice_last =  strftime('%d.%m', strtotime(current($last)));
+        $nice_last =  strftime('%d.%m.%y', strtotime(current($last)));
         return $nice_first . ' → '  . $nice_last;
     }
 }
