@@ -4,7 +4,6 @@ footer {
   margin: 0;
   padding: 110px 0 0px;
   position: relative;
-  z-index: -1;
 
   p {
     padding: 0 0 30px;
@@ -66,7 +65,7 @@ footer {
       color: $yellow;
       background: black;
       &:hover{
-        background: darken($yellow, 90%);
+        background: darken($yellow, 95%)!important;
       }
     }
 
