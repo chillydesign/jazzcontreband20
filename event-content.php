@@ -139,6 +139,7 @@
           </div>
           <?php echo $description; ?>
           <h5>Line-up</h5><?php echo $lineup; ?>
+          <?php the_thumbnail(); ?>
         </div>
       </div>
     </div>
