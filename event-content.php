@@ -39,6 +39,7 @@
                   <?php $numrows = count( $dates );?>
                   <?php if($numrows != 0){?>
                       <?php echo nice_event_dates( $dates   ); ?>
+                  <?php endif; ?>
               </p>
           <?php endif; // end of if dates ?>
 
