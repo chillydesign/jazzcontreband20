@@ -61,10 +61,10 @@
             <?php if($time OR $time_door_opens): ?>
               <p>
                 <?php if($time_door_opens) : ?>
-                    <span class="colleft">Ouverture des portes</span><span class="colright"><?php echo $time_door_opens; ?>
+                    <span class="colleft">Ouverture des portes</span><span class="colright"><?php echo $time_door_opens; ?></span>
                 <?php endif; ?>
                 <?php if($time) : ?>
-                    <span class="colleft">Début des concerts</span><span class="colright"><?php echo $time; ?>
+                    <span class="colleft">Début des concerts</span><span class="colright"><?php echo $time; ?></span>
                 <?php endif; ?>
 
               </p>

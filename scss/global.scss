@@ -124,6 +124,10 @@ body {
     margin-top: -6px;
   }
 
+  h4 a {
+    text-decoration: none;
+}
+
   a,
   a:hover,
   a:active,
@@ -131,6 +135,18 @@ body {
   a:link {
     color: $yellow;
   }
+
+  span.colleft {
+    display: inline-block;
+    width: calc(100% - 60px);
+}
+span.colright {
+    display: inline-block;
+    width: 50px;
+    text-align: right;
+}
+
+
 }
 
 .yellow_box,
