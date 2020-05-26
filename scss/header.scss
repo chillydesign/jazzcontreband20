@@ -162,10 +162,10 @@ header {
 
   padding: 0 0 30px;
 
-  @media (min-width: $mobile_width) {
-    background-image: url("../img/jcb_header_big.png");
-    height: 400px;
-  }
+  // @media (min-width: $mobile_width) {
+  //   background-image: url("../img/jcb_header_big.png");
+  //   height: 400px;
+  // }
 
 
   img {
@@ -176,12 +176,12 @@ header {
 
   a {
     display: block;
-    text-indent: -89999px;
+    // text-indent: -89999px;
     // position: absolute;
-   // height: 90%;
-   // width: 100%;
-   // top: 0;
-   // left: 0;
+    // height: 90%;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
   }
 
 
