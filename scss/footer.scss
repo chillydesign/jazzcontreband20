@@ -54,20 +54,16 @@ footer {
     input[type="submit"] {
       cursor: pointer;
       transition: all 0.3s;
+      color: $yellow;
+      background: black;
 
       &:hover,
       &:focus,
       &:active {
-        background: #998f00;
+        background: hsla(56, 100%, 15%, 1) !important;
       }
     }
-    input.button {
-      color: $yellow;
-      background: black;
-      &:hover{
-        background: darken($yellow, 95%)!important;
-      }
-    }
+
 
     @media(min-width:$mobile_width) {
       .form_col {
