@@ -150,7 +150,7 @@
               </p>
             </div>
           <?php endif; // end of website ?>
-          
+
           <?php if(get_field('image')): ?>
             <?php $image = get_field('image')['url']; ?>
             <div class="event_featured_image">
@@ -203,8 +203,6 @@
                                 </p>
                               </div>
                             <?php endif; // end if websiteminor ?>
-                          </div>
-
 
                           <?php if ($minor_photo): ?>
                               <img src="<?php echo $minor_photo['url']; ?>">
