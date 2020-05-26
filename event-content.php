@@ -36,23 +36,23 @@
               <?php echo nice_event_dates( $dates); ?>
           <?php endif; // end of if dates ?></h3>
           <hr>
-
             <?php if(!empty(get_field('venue_name'))) : ?>
-                <h4>
-              <span class="event_meta"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo get_field('venue_name'); ?></span>
+              <?php echo get_field('venue_name'); ?>
               <?php if (!empty($members)) : ?>
+                <h4>
                   <a href="<?php echo $members->guid; ?>" target="salle">
                    <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
+              </h4>
+              <br>
               <?php endif; // end of if members ?>
             <?php else : ?>
               <?php if (!empty($members)) : ?>
+                <h4>
                 <a href="<?php echo $members->guid; ?>" target="salle">
                 <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
               <?php endif; // end of if members ?>
-              </h4>
-              <br>
             <?php endif; //end of if venur_name ?>
 
 
