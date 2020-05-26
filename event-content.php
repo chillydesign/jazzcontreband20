@@ -191,7 +191,6 @@
                             <?php if($line_up_minor) : ?>
                                 <h5>Line-up: </h5>
                                 <?php echo $line_up_minor;?>
-                              </div>
                             <?php endif; // end if linupminor ?>
                             <?php if($website_minor): ?>
                               <div class="website">
