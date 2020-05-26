@@ -160,13 +160,11 @@
             <?php endif; // end of website ?>
 
           <?php elseif ($has_image): ?>
-            <div class="event_featured_image">
               <img src="<?php echo $image; ?>" alt="">
               <?php $thumb_copyright= get_post(get_post_thumbnail_id())->post_content; ?>
               <?php if ( $thumb_copyright != '') : ?>
                 <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
               <?php endif; ?>
-            </div>
           <?php endif; // end of if hasimage; ?>
 
 
@@ -209,14 +207,12 @@
 
 
                           <?php if ($minor_photo): ?>
-                            <div class="event_featured_image">
                               <img src="<?php echo $minor_photo['url']; ?>">
                               <?php if ($minor_photo['description'] != '') : ?>
                                 <p class="copyright_info">
                                   <?php echo $minor_photo['description']; ?>
                                 </p>
                               <?php endif; ?>
-                            </div>
                           <?php endif; // end of if $minor_photo; ?>
 
                       <?php endif; // end if $artist_name_minor ?>

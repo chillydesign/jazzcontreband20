@@ -612,6 +612,7 @@ acf_add_options_page($args);
 
 function nice_event_dates($dates)
 {
+  var_dump($dates);
     if (sizeof($dates) == 0) {
         return '-';
     } elseif (sizeof($dates) == 1) {
