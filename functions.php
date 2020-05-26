@@ -615,7 +615,7 @@ function nice_event_dates($dates)
     if (sizeof($dates) == 0) {
         return '-';
     } elseif (sizeof($dates) == 1) {
-        $nice_date =  strftime('Jeudi <br> %d.%m.%Y', strtotime(current($dates[0])));
+        $nice_date =  strftime('%l <br> %d.%m.%Y', strtotime(current($dates[0])));
         return $nice_date;
     } else {
         $first = current($dates);
