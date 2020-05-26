@@ -120,7 +120,25 @@
       </div>
       <div class="col-sm-8">
         <div class="white_box">
-          <?php the_content(); ?>
+          <h1>
+            <?php if($artist_name): ?>
+              - <?php echo $artist_name; ?>
+            <?php else: ?>
+              <?php the_title(); ?>
+            <?php endif; ?>
+          </h1>
+          <div class="infobar">
+            <span class="place"><?php echo $countries; ?></span>
+            <span class="styles">
+              <?php $i =1; foreach( $styles as $style ):
+                if ($i >1)  {  echo ' - '; }
+                echo $style;
+                $i++;
+              endforeach; ?>
+            </span>
+          </div>
+          <?php echo $description; ?>
+          <h5>Line-up</h5><?php echo $lineup; ?>
         </div>
       </div>
     </div>
@@ -273,38 +291,6 @@
 
 
         </div> <!-- END OF EVENTINFORMATION -->
-
-
-
-
-        <div id="ticketing" class="column small_column ">
-          <div class="grey_box">
-            <hr >
-            <h3> Tarifs </h3>
-            <?php if(! $tarif_plein ) : ?>
-              <p>Pas encore défini</p>
-            <?php  elseif(!$tarifs_reduits && !$tarif_passe_partout_jcb) : ?>
-              <p><?php echo $tarif_plein; ?></p>
-            <?php  else : ?>
-              <div class=" pricing">
-                <p><strong>Tarif plein</strong>: <?php echo $tarif_plein; ?></p>
-                <?php if(  $tarifs_reduits  ) : ?>
-                  <div class="pp_jcb"><p><strong>Tarif(s) réduit(s)</strong>: <?php echo ' ' . $tarifs_reduits; ?></p></div>
-                <?php endif;  // end of if $tarifs_reduits ?>
-                <?php if($tarif_passe_partout_jcb) : ?>
-                  <div class="pp_jcb"><p><strong>Tarif passe-partout JCB</strong>: <?php echo $tarif_passe_partout_jcb; ?></p></div>
-                  <h6><a target="_blank" href="https://etickets.infomaniak.com/shop/Da2TCvSh9o/"><i class="fa fa-key" aria-hidden="true"></i>  Acheter le passe-partout</a></h6>
-                <?php endif;  // end of if $tarif_passe_partout_jcb  ?>
-              </div>
-            <?php endif; ?>
-            <?php if( $ticketing_link ) :  ?>
-              <hr>
-              <h3>Billetterie</h3>
-              <p>
-                <a class="event_website" href ="<?php echo $ticketing_link;?>" target ="_blank"><i class="fa fa-ticket" aria-hidden="true"></i>  Acheter vos tickets en ligne</a>
-              </p>
-            <?php endif;  // end of if ticketinglink ?>
-          </div> <!-- END OF YELLOWBOX -->
 
 
 
