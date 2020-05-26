@@ -139,6 +139,18 @@
           </div>
           <?php echo $description; ?>
           <h5>Line-up</h5><?php echo $lineup; ?>
+
+          <?php if( $website): ?>
+            <div class="website">
+              <p>
+                <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                  <?php echo $website; ?>
+                </a>
+              </p>
+            </div>
+          <?php endif; // end of website ?>
+          
           <?php if(get_field('image')): ?>
             <?php $image = get_field('image')['url']; ?>
             <div class="event_featured_image">
@@ -148,18 +160,6 @@
                 <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
               <?php endif; ?>
             </div>
-            <?php echo $website; ?>
-            <?php if( $website): ?>
-              <div class="website">
-                <p>
-                  <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                    <?php echo $website; ?>
-                  </a>
-                </p>
-              </div>
-            <?php endif; // end of website ?>
-
           <?php elseif ($has_image): ?>
               <img src="<?php echo $image; ?>" alt="">
               <?php $thumb_copyright= get_post(get_post_thumbnail_id())->post_content; ?>
