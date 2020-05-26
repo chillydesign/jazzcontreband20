@@ -148,6 +148,17 @@
                 <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
               <?php endif; ?>
             </div>
+            <?php if( $website): ?>
+              <div class="website">
+                <p>
+                  <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
+                    <i class="fa fa-link" aria-hidden="true"></i>
+                    <?php echo $website; ?>
+                  </a>
+                </p>
+              </div>
+            <?php endif; // end of website ?>
+
           <?php elseif ($has_image): ?>
             <div class="event_featured_image">
               <img src="<?php echo $image; ?>" alt="">
@@ -158,16 +169,59 @@
             </div>
           <?php endif; // end of if hasimage; ?>
 
-          <?php if( $website): ?>
-            <div class="website">
-              <p>
-                <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
-                  <i class="fa fa-link" aria-hidden="true"></i>
-                  <?php echo $website; ?>
-                </a>
-              </p>
-            </div>
-          <?php endif; // end of website ?>
+
+                    <?php if($artist_name_minor): ?>
+                      <?php $countries_minor = get_field('countries_minor'); ?>
+                      <?php $line_up_minor = get_field('line-up_minor'); ?>
+                      <?php $website_minor = get_field('website_minor'); ?>
+                      <?php $description_minor = get_field('description_minor'); ?>
+                      <?php $minor_photo = get_field('photo_minor'); ?>
+
+                          <h2> <?php echo $artist_name_minor; ?></h2>
+                          <div class="infobar">
+                            <span class="place"><?php echo $countries_minor; ?></span>
+                            <span class="styles">
+                              <?php $i =1; foreach( $styles as $style ):
+                                if ($i >1)  {  echo ' - '; }
+                                echo $style;
+                                $i++;
+                              endforeach; ?>
+                            </span>
+                          </div>
+
+                            <?php echo $description_minor ;?>
+                            <?php if($line_up_minor) : ?>
+                                <h5>Line-up: </h5>
+                                <?php echo $line_up_minor;?>
+                              </div>
+                            <?php endif; // end if linupminor ?>
+                            <?php if($website_minor): ?>
+                              <div class="website">
+                                <p>
+                                  <a class="event_website" href="<?php echo $website_minor; ?>" target="_blank" >
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                    <?php echo $website_minor;?>
+                                  </a>
+                                </p>
+                              </div>
+                            <?php endif; // end if websiteminor ?>
+                          </div>
+
+
+                          <?php if ($minor_photo): ?>
+                            <div class="event_featured_image">
+                              <img src="<?php echo $minor_photo['url']; ?>">
+                              <?php if ($minor_photo['description'] != '') : ?>
+                                <p class="copyright_info">
+                                  <?php echo $minor_photo['description']; ?>
+                                </p>
+                              <?php endif; ?>
+                            </div>
+                          <?php endif; // end of if $minor_photo; ?>
+
+                      <?php endif; // end if $artist_name_minor ?>
+
+
 
 
         </div>
@@ -253,16 +307,7 @@
               </div>
             <?php endif; // end of lineup ?>
 
-            <?php if( $website): ?>
-              <div class="website">
-                <p>
-                  <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
-                    <i class="fa fa-link" aria-hidden="true"></i>
-                    <?php echo $website; ?>
-                  </a>
-                </p>
-              </div>
-            <?php endif; // end of website ?>
+
 
 
             <?php if(get_field('image')): ?>
@@ -326,60 +371,6 @@
 
 
 
-          <?php if($artist_name_minor): ?>
-            <?php $countries_minor = get_field('countries_minor'); ?>
-            <?php $line_up_minor = get_field('line-up_minor'); ?>
-            <?php $website_minor = get_field('website_minor'); ?>
-            <?php $description_minor = get_field('description_minor'); ?>
-            <?php $minor_photo = get_field('photo_minor'); ?>
-            <div class="grey_box" id="minor_artist">
-              <div class="content event_membres_details">
-
-                <h2 class="bordered_title"> <?php echo $artist_name_minor; ?></h2>
-
-
-                <?php if($countries_minor): ?>
-                  <p class="event_countries">
-                    <i class="fa fa-globe" aria-hidden="true"></i>
-                    <?php echo $countries_minor; ?></p>
-                  <?php endif; // end of if countries minor ?>
-                  <?php echo $description_minor ;?>
-
-                  <?php if($line_up_minor) : ?>
-                    <div class="line-up">
-                      <h4>Line-up: </h4>
-                      <?php echo $line_up_minor;?>
-                    </div>
-                  <?php endif; // end if linupminor ?>
-                  <?php if($website_minor): ?>
-                    <div class="website">
-                      <p>
-                        <a class="event_website" href="<?php echo $website_minor; ?>" target="_blank" >
-                          <i class="fa fa-link" aria-hidden="true"></i>
-                          <?php echo $website_minor;?>
-                        </a>
-                      </p>
-                    </div>
-                  <?php endif; // end if websiteminor ?>
-                </div>
-
-
-                <?php if ($minor_photo): ?>
-                  <div class="event_featured_image">
-                    <img src="<?php echo $minor_photo['url']; ?>">
-                    <?php if ($minor_photo['description'] != '') : ?>
-                      <p class="copyright_info">
-                        <?php echo $minor_photo['description']; ?>
-                      </p>
-                    <?php endif; ?>
-                  </div>
-                <?php endif; // end of if $minor_photo; ?>
-              </div> <!-- END OF grey BOX -->
-
-
-
-
-            <?php endif; // end if $artist_name_minor ?>
 
             <?php if ($members && $artist_name_minor == false ) :  ?>
               <div id="map_section" class="single_evnt_map">
