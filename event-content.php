@@ -36,8 +36,7 @@
           <hr>
           <?php if(have_rows('dates', $id)) : ?>
               <p class="event_styles">
-                  <?php $numrows = count( $dates );?>
-                      <?php echo nice_event_dates( $dates   ); ?>
+                      <?php echo nice_event_dates( $dates); ?>
               </p>
           <?php endif; // end of if dates ?>
 
