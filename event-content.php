@@ -22,6 +22,50 @@
 <!-- article -->
 <article  <?php post_class(); ?>>
 
+  <div class="container" id="main_section">
+    <div class="row">
+      <div class="col-sm-4 sticky">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="black_box ">
+          <h3>Contact</h3>
+          <hr>
+          <?php if(have_rows('dates', $id)) : ?>
+              <p class="event_styles">
+                  <?php $numrows = count( $dates );?>
+                  <?php if($numrows != 0){?>
+                      <?php echo nice_event_dates( $dates   ); ?>
+              </p>
+          <?php endif; // end of if dates ?>
+
+        </div>
+
+      </div>
+      <div class="col-sm-8">
+        <div class="white_box">
+          <?php the_content(); ?>
+
+          <?php include('section-loop.php'); ?>
+          <?php if (have_rows('galleries')) get_template_part('gallery_content'); ?>
+          <?php if (have_rows('press')) get_template_part('press_content'); ?>
+        <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
     <div class="container">
         <div class="column_container column_container_reversed">
 
