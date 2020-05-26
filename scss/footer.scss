@@ -62,6 +62,13 @@ footer {
         background: #998f00;
       }
     }
+    input.button {
+      color: $yellow;
+      background: black;
+      &:hover{
+        background: darken($yellow, 90%);
+      }
+    }
 
     @media(min-width:$mobile_width) {
       .form_col {
