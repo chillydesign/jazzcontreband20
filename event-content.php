@@ -148,6 +148,7 @@
                 <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
               <?php endif; ?>
             </div>
+            <?php echo $website; ?>
             <?php if( $website): ?>
               <div class="website">
                 <p>
