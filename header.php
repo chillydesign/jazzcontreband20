@@ -59,5 +59,8 @@
 	</nav>
 
 	<header>
-		<a href="<?php echo home_url(); ?>">Jazzcontreband</a>
+		<a href="<?php echo home_url(); ?>">
+			<img class="show_on_mobile" src="<?php echo $tdu; ?>/img/jcb_header_mobile.png" alt="">
+			<img class="hide_on_mobile" src="<?php echo $tdu; ?>/img/jcb_header_big.png" alt="">
+		</a>
 	</header>

@@ -1,11 +1,12 @@
 @font-face {
   font-family: 'gt_alpinalight';
   src: url('../fonts/gt-alpina-standard-light-webfont.woff2') format('woff2'),
-  url('../fonts/gt-alpina-standard-light-webfont.woff') format('woff');
+    url('../fonts/gt-alpina-standard-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
 }
+
 @import "./variables";
 @import "./reset";
 
@@ -38,6 +39,7 @@ article {
   position: relative;
   z-index: 1;
 }
+
 .column_container {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +74,26 @@ article {
       width: 40%;
     }
   }
+}
+
+
+.hide_on_mobile {
+  display: none;
+}
+
+
+
+@media (min-width: $mobile_width) {
+  .show_on_mobile {
+    display: none;
+
+  }
+
+  .hide_on_mobile {
+    display: block;
+  }
+
+
 }
 
 .download_columns {
@@ -117,6 +139,7 @@ article {
     font-size: 1.7em;
     color: $yellow;
     font-weight: bold;
+
     span.place {
       min-width: 160px;
       display: inline-block;
@@ -127,7 +150,7 @@ article {
     color: black;
     text-decoration: none;
     font-size: 0.9em;
-}
+  }
 
   p.copyright_info {
     font-size: 1em;
@@ -161,6 +184,7 @@ article {
     text-transform: none;
     font-weight: bold;
     font-family: $font_stack;
+
     a {
       text-decoration: none;
     }
@@ -185,6 +209,7 @@ article {
     display: inline-block;
     width: calc(100% - 60px);
   }
+
   span.colright {
     display: inline-block;
     width: 50px;

@@ -5,12 +5,12 @@ var minify = require("gulp-minify");
 var watch = require("gulp-watch");
 //var browserSync = require('browser-sync');
 
-gulp.task("heya", function(done) {
+gulp.task("heya", function (done) {
   console.log("I live! Gulp is alive!");
   done();
 });
 
-gulp.task("sass", function(done) {
+gulp.task("sass", function (done) {
   return gulp
     .src("scss/global.scss")
 
@@ -25,11 +25,11 @@ gulp.task("sass", function(done) {
   done();
 });
 
-gulp.task("watch", function() {
+gulp.task("watch", function () {
   watch("scss/*.scss", gulp.series("sass"));
 });
 
 // Run all Gulp tasks and serve application
-gulp.task("default", gulp.series("sass", "watch"), function() {
+gulp.task("default", gulp.series("sass", "watch"), function () {
   // sass function now incldes the watching of files
 });

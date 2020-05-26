@@ -152,14 +152,15 @@ nav {
 
 header {
 
-  background: url("../img/jcb_header_mobile.png") no-repeat right center;
-  background-size: cover;
-  height: 300px;
-  width: 90%;
-  padding: 0 0 30px;
-  margin: 0 5%;
-  position: relative;
+  // background: url("../img/jcb_header_mobile.png") no-repeat right center;
+  // background-size: cover;
+  // height: 300px;
+  // width: 90%;
+  // padding: 0 0 30px;
+  // margin: 0 5%;
+  // position: relative;
 
+  padding: 0 0 30px;
 
   @media (min-width: $mobile_width) {
     background-image: url("../img/jcb_header_big.png");
@@ -167,14 +168,20 @@ header {
   }
 
 
+  img {
+    width: 90%;
+    height: auto;
+    margin: 0 5%;
+  }
+
   a {
     display: block;
     text-indent: -89999px;
-    position: absolute;
-    height: 90%;
-    width: 100%;
-    top: 0;
-    left: 0;
+    // position: absolute;
+   // height: 90%;
+   // width: 100%;
+   // top: 0;
+   // left: 0;
   }
 
 
