@@ -115,6 +115,38 @@
 
           <?php endif; ?>
 
+          <?php $latlng = get_field('venue_gmap'); ?>
+          <?php if($latlng) :
+
+            $locations = [];
+            $latlngx = explode( ',', $latlng   );
+            $obj = new stdClass();
+            $obj->title = get_field('venue_name');
+            $obj->id = '';
+            $obj->url = '';
+            $obj->blah = $latlng;
+            $classes = 'small_map';
+
+
+            if(is_array($latlngx) && sizeof($latlngx)==2){
+              $obj->lat = $latlngx[0];
+              $obj->lng = $latlngx[1];
+
+            }
+            array_push(  $locations,  $obj);
+            echo '  <div id="map_section" class="single_evnt_map">
+            <script> var $member_locations = ' . json_encode($locations) .' </script>
+            <div class=" ' .  $classes .'" id="member_map_container"></div>
+            </div>';
+
+            ?>
+
+          <?php elseif ($members && $artist_name_minor ) :  ?>
+            <div id="map_section" class="single_evnt_map">
+              <?php echo do_shortcode('[jazz_membres_map]'); ?>
+            </div>
+          <?php endif; // end of if members ?>
+
         </div>
 
       </div>
