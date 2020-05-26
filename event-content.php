@@ -36,22 +36,25 @@
               <?php echo nice_event_dates( $dates); ?>
           <?php endif; // end of if dates ?></h3>
           <hr>
-          <h4>
+
             <?php if(!empty(get_field('venue_name'))) : ?>
+                <h4>
               <span class="event_meta"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo get_field('venue_name'); ?></span>
               <?php if (!empty($members)) : ?>
-                  <br><a href="<?php echo $members->guid; ?>" target="salle">
-                  <span class="event_meta">Salle organisatrice : <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?></span>
+                  <a href="<?php echo $members->guid; ?>" target="salle">
+                   <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
               <?php endif; // end of if members ?>
             <?php else : ?>
               <?php if (!empty($members)) : ?>
-                  <br>Salle organisatrice : <a href="<?php echo $members->guid; ?>" target="salle">
-                  <span class="event_meta"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?></span>
+                <a href="<?php echo $members->guid; ?>" target="salle">
+                <?php echo $members->post_title; ?> - <?php echo get_field('ville', $members->ID); ?>
                 </a>
               <?php endif; // end of if members ?>
+              </h4>
+              <br>
             <?php endif; //end of if venur_name ?>
-          </h4>
+
 
         </div>
 
