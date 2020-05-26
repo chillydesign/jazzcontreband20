@@ -158,7 +158,18 @@
             </div>
           <?php endif; // end of if hasimage; ?>
 
-          
+          <?php if( $website): ?>
+            <div class="website">
+              <p>
+                <a class="event_website" href="<?php echo get_field('website'); ?>" target="_blank" >
+                  <i class="fa fa-link" aria-hidden="true"></i>
+                  <?php echo $website; ?>
+                </a>
+              </p>
+            </div>
+          <?php endif; // end of website ?>
+
+
         </div>
       </div>
     </div>

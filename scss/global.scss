@@ -106,8 +106,6 @@ body {
   background-color: white;
   color: $font_color;
 
-
-
   .infobar {
     background: black;
     padding: 2px 10px;
@@ -119,6 +117,10 @@ body {
       min-width: 160px;
       display: inline-block;
     }
+  }
+  p.copyright_info {
+    font-size: 1em;
+    margin: -20px 0 20px;
   }
 }
 

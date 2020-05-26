@@ -41,6 +41,11 @@ h4 {
   text-transform: uppercase;
 }
 
+h5 {
+  font-size: 2em;
+  font-family: $font_stack;
+}
+
 p {
   font-size: $font_size;
   line-height: 160%;
