@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'gt_alpinalight';
-    src: url('../fonts/gt-alpina-standard-light-webfont.woff2') format('woff2'),
-         url('../fonts/gt-alpina-standard-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'gt_alpinalight';
+  src: url('../fonts/gt-alpina-standard-light-webfont.woff2') format('woff2'),
+  url('../fonts/gt-alpina-standard-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 
 }
 @import "./variables";
@@ -105,6 +105,21 @@ body {
 .white_box {
   background-color: white;
   color: $font_color;
+
+
+
+  .infobar {
+    background: black;
+    padding: 2px 10px;
+    margin: -40px 0 20px;
+    font-size: 1.7em;
+    color: $yellow;
+    font-weight: bold;
+    span.place {
+      min-width: 160px;
+      display: inline-block;
+    }
+  }
 }
 
 .black_box,
@@ -152,15 +167,20 @@ body {
   span.colleft {
     display: inline-block;
     width: calc(100% - 60px);
-}
-span.colright {
+  }
+  span.colright {
     display: inline-block;
     width: 50px;
     text-align: right;
-}
+  }
 
 
 }
+
+
+
+
+
 
 .yellow_box,
 .yellow_event {

@@ -19,6 +19,12 @@ h2 {
   padding: 0 0 30px;
   font-weight: normal;
   @media (min-width: $mobile_width) {
+    font-size: 5.5em;
+  }
+}
+
+.home h2 {
+  @media (min-width: $mobile_width) {
     font-size: 6.5em;
   }
 }

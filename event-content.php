@@ -122,7 +122,7 @@
         <div class="white_box">
           <h1>
             <?php if($artist_name): ?>
-              - <?php echo $artist_name; ?>
+              <?php echo $artist_name; ?>
             <?php else: ?>
               <?php the_title(); ?>
             <?php endif; ?>
@@ -139,7 +139,26 @@
           </div>
           <?php echo $description; ?>
           <h5>Line-up</h5><?php echo $lineup; ?>
-          <?php the_thumbnail(); ?>
+          <?php if(get_field('image')): ?>
+            <?php $image = get_field('image')['url']; ?>
+            <div class="event_featured_image">
+              <img src="<?php echo $image; ?>" alt="">
+              <?php $thumb_copyright= get_post(get_post_thumbnail_id())->post_content; ?>
+              <?php if ( $thumb_copyright != '') : ?>
+                <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php elseif ($has_image): ?>
+            <div class="event_featured_image">
+              <img src="<?php echo $image; ?>" alt="">
+              <?php $thumb_copyright= get_post(get_post_thumbnail_id())->post_content; ?>
+              <?php if ( $thumb_copyright != '') : ?>
+                <p class="copyright_info"><?php echo $thumb_copyright; ?></p>
+              <?php endif; ?>
+            </div>
+          <?php endif; // end of if hasimage; ?>
+
+          
         </div>
       </div>
     </div>
