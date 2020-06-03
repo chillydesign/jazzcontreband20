@@ -23,7 +23,7 @@
 							<br>
 							<br>
 							<div class="black_box ">
-							<?php echo get_field('sidebar'); ?>
+							<?php echo get_field('sidebar'); ?>	
 							</div>
 
 						</div>

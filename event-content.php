@@ -77,7 +77,7 @@
           <?php if($tarif_plein_prevente OR $tarif_plein_sur_place OR $tarif_reduit_prevente OR $tarif_reduit_sur_place OR $tarif_passe_partout_jcb): ?>
 
             <?php if($tarif_plein_prevente OR $tarif_plein_sur_place): ?>
-              <h5>TARIFS PLEIN</h5>
+              <h5>PLEIN TARIF</h5>
               <p>
                 <?php if($tarif_plein_prevente) : ?>
                   <span class="colleft">Prévente</span><span class="colright"><?php echo $tarif_plein_prevente; ?></span>
