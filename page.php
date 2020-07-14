@@ -15,6 +15,7 @@
 
 				<div class="container" id="main_section">
 					<div class="row">
+						<?php if(get_field('sidebar')):?>
 						<div class="col-sm-4 sticky">
 
 							<br>
@@ -23,11 +24,14 @@
 							<br>
 							<br>
 							<div class="black_box ">
-							<?php echo get_field('sidebar'); ?>	
+							<?php echo get_field('sidebar'); ?>
 							</div>
 
 						</div>
 						<div class="col-sm-8">
+						<?php else: ?>
+							<div class="col-sm-12">
+						<?php endif; ?>
 							<div class="white_box">
 								<?php the_content(); ?>
 
