@@ -156,9 +156,6 @@ $rp_frm .= '<div class="column">';
   $rp_frm .= '<div class="column">';
   $rp_frm .=  make_reperage_field('adresse', 'Adresse',  $reperage_id, 'input');
   $rp_frm .= '</div>';
-  $rp_frm .= '</div>';
-  $rp_frm .= '</div>';
-  $rp_frm .= '</div>';
 
 
 $rp_frm .= '</div>';
@@ -181,14 +178,16 @@ $rp_frm .= '</div>';
 
 
 
-  $rp_frm .= '<div class="column_container"><div class="column big_column"><input type="submit" id="submit_course_form" value="Envoyer"></div>';
+  $rp_frm .= '<input type="submit" id="submit_course_form" value="Envoyer">';
 
     if ($reperage) :
       $rp_frm .= '<div class="column small_column"><a href="?reperage_id='. $reperage_id .'&delete_reperage=true" class="delete_reperage">Supprimer</a></div>';
   endif;
 
-    $rp_frm .= '</div></form>';
-
+    $rp_frm .= '</form>';
+    $rp_frm .= '</div>';
+    $rp_frm .= '</div>';
+    $rp_frm .= '</div>';
 
   // HIDDEN ACTION INPUT IS REQUIRED TO POST THE DATA TO THE CORRECT PLACE
 
