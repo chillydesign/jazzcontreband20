@@ -134,8 +134,8 @@ $rp_frm .= '<div class="container ">';
 
   $rp_frm .= '<div class="reperage_box stripes">';
 
-  $rp_frm .= '<div class="column_container">';
-  $rp_frm .= '<div class="column">
+  $rp_frm .= '<div class="column_container" style="margin-right:-20px">';
+  $rp_frm .= '<div class="column" style="width: 290px;margin: 0 20px 0-20px;">
   <h3 style="padding-left:15px;"><i class="fa fa-user" aria-hidden="true"></i> Contact</h3></div>';
 $rp_frm .= '<div class="column">';
   $rp_frm .= '<div style="padding:0 20px;">';
