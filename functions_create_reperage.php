@@ -103,13 +103,13 @@ $rp_frm .= '<div class="container ">';
     $rp_frm .= '<div class="column big_column">';
       $rp_frm .=  make_reperage_field('formation_artiste', 'Formation - Artiste',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('commentaires', 'Description',  $reperage_id, 'textarea');
+      $rp_frm .=  make_reperage_field('country', 'Pays',  $reperage_id, 'radio', ['France', 'Suisse', 'Franco-Suisse']  );
     $rp_frm .= '</div>';
 
     $rp_frm .= '<div class="column small_column">';
       $rp_frm .=  make_reperage_field('style', 'Style de musique',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('origine', 'Origine',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('numbre', 'Nombre de musiciens',  $reperage_id, 'input');
-      $rp_frm .=  make_reperage_field('country', 'Pays',  $reperage_id, 'radio', ['France', 'Suisse', 'Franco-Suisse']  );
     $rp_frm .= '</div>';
 
   $rp_frm .= '</div>';

@@ -1029,8 +1029,11 @@ input {
   display: block;
   width: 100%;
   margin-bottom: 15px;
+  font-size: 14px;
 }
-
+input [type="text"], textarea{
+  width:100%; border:solid 1px black;
+}
 input#pwbox-836 {
   font-size: 1.2em;
 }
