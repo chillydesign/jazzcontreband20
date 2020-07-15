@@ -129,6 +129,17 @@ input {
   font-size: $font_size;
 }
 
+label.inline_label {
+    display: inline-block;
+    position: relative;
+    input[type="radio"] {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+}
+
+
 hr {
   appearance: none;
   border: 0;

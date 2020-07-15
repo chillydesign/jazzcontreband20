@@ -117,7 +117,7 @@ $rp_frm .= '<div class="container ">';
 
   $rp_frm .= '<div class="reperage_box stripes">';
   $rp_frm .= '<div class="column_container">';
-  $rp_frm .= '<h3 style="padding-left:15px;"><i class="fa fa-link" aria-hidden="true"></i> Sites web</h3>';
+  $rp_frm .= '<h3 style="padding-left:15px; width:1140px;"><i class="fa fa-link" aria-hidden="true"></i> Sites web</h3>';
 
     $rp_frm .= '<div class="column">';
       $rp_frm .=  make_reperage_field('lien_1', 'Lien (site web, youtube ou autre)',  $reperage_id, 'input');
