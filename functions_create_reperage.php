@@ -136,13 +136,13 @@ $rp_frm .= '<div class="container ">';
 
   $rp_frm .= '<h3 style="padding-left:15px;"><i class="fa fa-user" aria-hidden="true"></i> Contact</h3>';
 
-  $rp_frm .= '<div class="column_container"><div class="column">';
+  $rp_frm .= '<div >';
   $rp_frm .=  make_reperage_field('contact', 'Personne de contact',  $reperage_id, 'input');
   $rp_frm .= '</div>';
   $rp_frm .= '<div class="column_container">';
   $rp_frm .= '<div class="column">';
   $rp_frm .=  make_reperage_field('tel_1', 'Téléphone 1',  $reperage_id, 'input');
-  $rp_frm .= '</div></div>';
+  $rp_frm .= '</div>';
   $rp_frm .= '<div class="column">';
   $rp_frm .=  make_reperage_field('tel_2', 'Téléphone 2',  $reperage_id, 'input');
   $rp_frm .= '</div>';
