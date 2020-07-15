@@ -178,7 +178,7 @@ $rp_frm .= '</div>';
 
 
 
-  $rp_frm .= '<input type="submit" id="submit_course_form" value="Envoyer">';
+  $rp_frm .= '<input type="submit" id="submit_course_form" value="Envoyer" style="margin: 10px 20px 20px;width: calc(100% - 40px);">';
 
     if ($reperage) :
       $rp_frm .= '<div class="column small_column"><a href="?reperage_id='. $reperage_id .'&delete_reperage=true" class="delete_reperage">Supprimer</a></div>';
