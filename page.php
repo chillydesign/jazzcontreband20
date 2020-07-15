@@ -13,25 +13,16 @@
 		<article id="post-<?php the_ID(); ?>">
 			<?php if (!post_password_required($post)) : ?>
 
+				<?php $sidebar = get_field('sidebar'); ?>
+
 				<div class="container" id="main_section">
 					<div class="row">
-						<?php if(get_field('sidebar')):?>
-						<div class="col-sm-4 sticky">
 
-							<br>
-							<br>
-							<br>
-							<br>
-							<br>
-							<div class="black_box ">
-							<?php echo get_field('sidebar'); ?>
-							</div>
+						<?php $mainclass = ($sidebar) ? 'col-sm-8 col-sm-push-4' :  'col-sm-12'; ?>
 
-						</div>
-						<div class="col-sm-8">
-						<?php else: ?>
-							<div class="col-sm-12">
-						<?php endif; ?>
+						<div class="<?php echo $mainclass; ?>">
+
+
 							<div class="white_box">
 								<?php the_content(); ?>
 
@@ -41,6 +32,25 @@
 							<?php endif; ?>
 							</div>
 						</div>
+
+						<?php if ($sidebar) : ?>
+							<div class="col-sm-4 col-sm-pull-8 sticky">
+
+								<br>
+								<br>
+								<br>
+								<br>
+								<br>
+								<div class="black_box ">
+									<?php echo $sidebar; ?>
+								</div>
+
+							</div>
+
+						<?php endif; ?>
+
+
+
 					</div>
 				</div>
 				</div>
