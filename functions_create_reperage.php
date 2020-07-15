@@ -59,7 +59,7 @@ function reperage_form_shortcode($atts , $content = null) {
 
   // MESSAGE TO SAY DELETE WAS SUCCESFUL
   if (isset($_GET['problem'])) {
-    $rp_frm .= '<div class="container"> <div class=" black" style="padding: 25px 35px 25px;     text-align: center;     margin-bottom: 30px;">';
+    $rp_frm .= '<div class="container"> <div class=" black" style="padding: 20px 20px 0;     text-align: center;     margin-bottom: 30px; background: #ffbf004f;">';
     $rp_frm .= ' <p>Une erreur s’est produite en enregistrant ce repérage. Veuillez réessayer. </p>';
     $rp_frm .= '</div></div>';
   };
