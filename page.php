@@ -23,7 +23,7 @@
 						<div class="<?php echo $mainclass; ?>">
 
 
-							<div class="white_box">
+							<div class="white_box white_box_shadow_bottom">
 								<?php the_content(); ?>
 
 								<?php include('section-loop.php'); ?>
