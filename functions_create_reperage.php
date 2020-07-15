@@ -77,7 +77,7 @@ function reperage_form_shortcode($atts , $content = null) {
 
   // MESSAGE TO SAY DELETE WAS SUCCESFUL
   if (isset($_GET['supprime'])) {
-    $rp_frm .= '<div class="container"> <div class=" black" style="padding: 25px 35px 25px;     text-align: center;     margin-bottom: 30px;">';
+    $rp_frm .= '<div class="container"> <div class=" black" style="padding: 20px 20px 0;     text-align: center;     margin-bottom: 30px;">';
     $rp_frm .= ' <h2>Le repérage a bien été supprimé</h2>';
     $rp_frm .= '</div></div>';
   };
@@ -85,7 +85,7 @@ function reperage_form_shortcode($atts , $content = null) {
 
   if ($reperage) {
     $rp_frm .= '<div class="container"> <div class=" black" style="padding: 25px 35px 25px;     text-align: center;     margin-bottom: 30px;">';
-    $rp_frm .= ' <h2>Modifier le repérage: <strong>' .  $reperage->post_title   .'</strong></h2>';
+    $rp_frm .= ' <h2 style="font-size: 4.7em;">Modifier le repérage: <strong>' .  $reperage->post_title   .'</strong></h2>';
     $rp_frm .= '</div></div>';
   }
 
@@ -103,13 +103,14 @@ $rp_frm .= '<div class="container ">';
     $rp_frm .= '<div class="column big_column">';
       $rp_frm .=  make_reperage_field('formation_artiste', 'Formation - Artiste',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('commentaires', 'Description',  $reperage_id, 'textarea');
-      $rp_frm .=  make_reperage_field('country', 'Pays',  $reperage_id, 'radio', ['France', 'Suisse', 'Franco-Suisse']  );
+
     $rp_frm .= '</div>';
 
     $rp_frm .= '<div class="column small_column">';
       $rp_frm .=  make_reperage_field('style', 'Style de musique',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('origine', 'Origine',  $reperage_id, 'input');
       $rp_frm .=  make_reperage_field('numbre', 'Nombre de musiciens',  $reperage_id, 'input');
+        $rp_frm .=  make_reperage_field('country', 'Pays',  $reperage_id, 'radio', ['France', 'Suisse', 'Franco-Suisse']  );
     $rp_frm .= '</div>';
 
   $rp_frm .= '</div>';
