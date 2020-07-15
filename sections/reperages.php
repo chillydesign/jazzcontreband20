@@ -8,7 +8,9 @@ $rc = ( isset($_GET['country'])) ? $_GET['country'] : false;
 
 <div class="white" id="reperages">
 	<div class="container">
-		<h2 style="text-align:center; margin-bottom:50px">Repérages</h2>
+		<hr>
+		<h2 style="text-align: center; margin: 10px 0 30px; background: #ffed00;padding: 10px;">Repérages</h2>
+		<hr style="margin-bottom:50px">
 		<div class="column_container column_container_reversed">
 
 			<div class="column small_column">
