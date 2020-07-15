@@ -5,11 +5,11 @@
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-    <?php  //get_template_part( 'partials/page-header' ); ?>
+    <?php  get_template_part( 'partials/page-header' ); ?>
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-boop
+
       <div class="container" id="main_section">
         <div class="row">
             <div class="col-sm-12">
@@ -85,7 +85,6 @@ boop
     </div><!--  END OF CONTAINER -->
 
 </section>
-<?php endif; ?>
 </div>
 </div>
 </div>
