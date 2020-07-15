@@ -96,6 +96,17 @@ article {
 
 }
 
+
+section.section.section_downloads{
+  margin: 0 -50px;
+  .gray_box {
+    background: #eee;
+    .container {
+    max-width: calc(100% + 60px)!important;
+    margin-left: -30px;
+}
+  }
+}
 .download_columns {
   justify-content: flex-start;
 
