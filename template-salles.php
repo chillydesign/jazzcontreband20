@@ -15,7 +15,7 @@
             <div class="col-sm-12">
             <div class="white_box">
               <?php the_content(); ?>
-              boop
+              
 
               <?php include('section-loop.php'); ?>
 
