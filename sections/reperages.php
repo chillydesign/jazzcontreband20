@@ -13,7 +13,7 @@ $rc = ( isset($_GET['country'])) ? $_GET['country'] : false;
 
 			<div class="column small_column">
 
-				<aside class="black_box">
+				<aside class="black_box sticky">
 					<form method="get" style="margin-bottom:30px;">
 					<label for="search_rep">
 						<h4> <i class="fa fa-search"></i> Rechercher</h4>
