@@ -9,7 +9,15 @@
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-        <?php include('section-loop.php'); ?>
+
+      <div class="container" id="main_section">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="white_box">
+              <?php the_content(); ?>
+
+              <?php include('section-loop.php'); ?>
+
 
         <div id="map_section">
 
@@ -77,6 +85,11 @@
     </div><!--  END OF CONTAINER -->
 
 </section>
+<?php endif; ?>
+</div>
+</div>
+</div>
+</div>
 
 
 <div class="clear"></div>
