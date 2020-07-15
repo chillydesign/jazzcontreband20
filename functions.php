@@ -91,7 +91,7 @@ function webfactor_nav()
 
 function wf_version()
 {
-    return '0.1.0';
+    return '0.1.1';
 }
 
 // Load webfactor  scripts (header.php)webfactor
@@ -634,7 +634,7 @@ function nice_event_dates($dates)
 
 // requred to keep track of what color column we should be using
 $color_classes = ['yellow_box', 'black_box', 'grey_box'];
-$color_classes = ['yellow_box', 'grey_box','yellow_box', 'grey_box'];
+$color_classes = ['yellow_box', 'grey_box', 'yellow_box', 'grey_box'];
 $ccc = 0;
 
 
