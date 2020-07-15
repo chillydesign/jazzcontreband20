@@ -10,7 +10,7 @@
         </div>
         <div class="row">
           <div class="col-sm-4">
-            <h3>Newsletter</h3>
+            <h3 style="padding-top:30px">Newsletter</h3>
             <p>
               Inscrivez-vous à notre newsletter <br>et recevez 3-4 fois par an maximum <br>les informations du festival <br>et de la saison JazzContreBand.
             </p>
