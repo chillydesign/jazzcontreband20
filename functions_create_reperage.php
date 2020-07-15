@@ -134,9 +134,11 @@ $rp_frm .= '<div class="container ">';
 
   $rp_frm .= '<div class="reperage_box stripes">';
 
-  $rp_frm .= '<h3 style="padding-left:15px;"><i class="fa fa-user" aria-hidden="true"></i> Contact</h3>';
-
-  $rp_frm .= '<div >';
+  $rp_frm .= '<div class="column_container">';
+  $rp_frm .= '<div class="column">
+  <h3 style="padding-left:15px;"><i class="fa fa-user" aria-hidden="true"></i> Contact</h3></div>';
+$rp_frm .= '<div class="column">';
+  $rp_frm .= '<div style="padding:0 20px;">';
   $rp_frm .=  make_reperage_field('contact', 'Personne de contact',  $reperage_id, 'input');
   $rp_frm .= '</div>';
   $rp_frm .= '<div class="column_container">';
@@ -153,6 +155,8 @@ $rp_frm .= '<div class="container ">';
   $rp_frm .= '</div>';
   $rp_frm .= '<div class="column">';
   $rp_frm .=  make_reperage_field('adresse', 'Adresse',  $reperage_id, 'input');
+  $rp_frm .= '</div>';
+  $rp_frm .= '</div>';
   $rp_frm .= '</div>';
   $rp_frm .= '</div>';
 
