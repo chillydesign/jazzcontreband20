@@ -484,17 +484,22 @@ section.section.section_colonnes {
   }
 }
 
-@media(min-width: $mobile_width) {
-  .single-evenement_festival section.section.section_colonnes .black_box {
-    padding: 20px;
+.single-evenement_festival section.section.section_colonnes .black_box {
+  // MOBILE SIZE
+
+  @media(min-width: $mobile_width) {
+    // TABLET SIZE
+    // padding: 20px;
+  }
+
+  @media(max-width: $tablet_width) {
+    // BIGGER SIZE HERE
+    // padding: 20px 50px;
+
   }
 }
 
-@media(max-width: $tablet_width) {
-  .single-evenement_festival section.section.section_colonnes .black_box {
-    padding: 20px 50px;
-  }
-}
+
 
 
 .upcoming_event {
