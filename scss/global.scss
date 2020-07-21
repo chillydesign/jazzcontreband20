@@ -492,7 +492,7 @@ section.section.section_colonnes {
     // padding: 20px;
   }
 
-  @media(max-width: $tablet_width) {
+  @media(min-width: $tablet_width) {
     // BIGGER SIZE HERE
     // padding: 20px 50px;
 
