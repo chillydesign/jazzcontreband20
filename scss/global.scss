@@ -145,6 +145,8 @@ section.section.section_downloads {
 
 .col-sm-12 .white_box {
   margin-left: 20px;
+
+
 }
 
 .white_box {
@@ -178,7 +180,13 @@ section.section.section_downloads {
 }
 
 .white_box {
-  margin-right: 20px;
+
+
+  @media (min-width: $mobile_width) {
+    margin-right: 20px;
+  }
+
+
 }
 
 .black_box,
@@ -477,13 +485,13 @@ section.section.section_colonnes {
 }
 
 @media(min-width: $mobile_width) {
-  .single-evenement_festival section.section.section_colonnes   .black_box {
+  .single-evenement_festival section.section.section_colonnes .black_box {
     padding: 20px;
   }
 }
 
-@media(max-width: $tablet_width){
-  .single-evenement_festival section.section.section_colonnes   .black_box {
+@media(max-width: $tablet_width) {
+  .single-evenement_festival section.section.section_colonnes .black_box {
     padding: 20px 50px;
   }
 }
@@ -1148,7 +1156,15 @@ div.wpcf7-mail-sent-ok {
 
 #main_section {
   position: relative;
-  top: -30px;
+  top: 0;
+
+  @media (min-width: $mobile_width) {
+
+    top: -30px;
+
+  }
+
+
 }
 
 
