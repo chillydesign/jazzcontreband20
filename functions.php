@@ -91,7 +91,7 @@ function webfactor_nav()
 
 function wf_version()
 {
-    return '0.1.2';
+    return '0.1.3';
 }
 
 // Load webfactor  scripts (header.php)webfactor
