@@ -57,17 +57,7 @@ $loop = new WP_Query($args);
                             <?php endif; // end of if dates  
                             ?>
 
-                            <?php $numrows = count(get_field('dates')); ?>
-                            <?php $i = 1; ?>
-                            <?php while (have_rows('dates', $id)) : the_row(); ?>
-                                <?php if ($i == $numrows) {
-                                    echo get_sub_field('date');
-                                } else {
-                                    $pieces = explode(" ",  get_sub_field('date'));
-                                    echo $pieces['0'] . ' - ';
-                                } ?>
-                                <?php $i++; ?>
-                            <?php endwhile; ?>
+
 
                         </div>
                     </div>
