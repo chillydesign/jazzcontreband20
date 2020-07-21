@@ -476,6 +476,19 @@ section.section.section_colonnes {
   }
 }
 
+@media(min-width: $mobile_width) {
+  .single-evenement_festival section.section.section_colonnes   .black_box {
+    padding: 20px;
+  }
+}
+
+@media(max-width: $tablet_width){
+  .single-evenement_festival section.section.section_colonnes   .black_box {
+    padding: 20px 50px;
+  }
+}
+
+
 .upcoming_event {
   h6 {
     font-size: 5em;
