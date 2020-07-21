@@ -614,6 +614,22 @@ acf_add_options_page($args);
 
 
 
+function other_nice_event_dates($dates)
+{
+
+    if (sizeof($dates) == 0) {
+        return '-';
+    } elseif (sizeof($dates) == 1) {
+        $nice_date =  strftime('%A  %d.%m.%Y', strtotime(current($dates[0])));
+        return $nice_date;
+    } else {
+        $first = current($dates);
+        $last = end($dates);
+        $nice_first =  strftime('%a %d', strtotime(current($first)));
+        $nice_last =  strftime('%d.%m.%Y', strtotime(current($last)));
+        return $nice_first . ' → '  . $nice_last;
+    }
+}
 function nice_event_dates($dates)
 {
 
