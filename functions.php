@@ -620,7 +620,13 @@ function other_nice_event_dates($dates)
     if (sizeof($dates) == 0) {
         return '-';
     } elseif (sizeof($dates) == 1) {
-        $nice_date =  strftime('%A  %d %B %Y', strtotime(current($dates[0])));
+        $day =  strftime('%A', strtotime(current($dates[0])));
+        $date =  strftime('%e', strtotime(current($dates[0])));
+        $month =  strftime(' %B %Y', strtotime(current($dates[0])));
+        if ($date == '1' || $date == 1) {
+            $date =  '1er';
+        }
+        $nice_date =  $day . ' ' . $date . ' ' . $month;
         return $nice_date;
     } else {
         $first = current($dates);
