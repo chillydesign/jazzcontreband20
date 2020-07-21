@@ -743,6 +743,10 @@ ul#events {
         padding: 0;
         min-height: 350px;
 
+        @media (min-width: $mobile_width) {
+          min-width: 33%;
+        }
+
         .event_thumb {
           background: no-repeat top center;
           background-size: cover;
