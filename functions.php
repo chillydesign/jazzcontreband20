@@ -636,6 +636,8 @@ function other_nice_event_dates($dates)
         return $nice_first . ' → '  . $nice_last;
     }
 }
+
+
 function nice_event_dates($dates)
 {
 
