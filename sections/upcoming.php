@@ -50,7 +50,7 @@ $loop = new WP_Query($args);
                         <br>
                         <div class="event_date">
                             <?php $id = get_the_ID(); ?>
-                            <?php $dates = get_sub_field('dates', $id, false); ?>
+                            <?php $dates = get_field('dates', $id, false); ?>
 
                             <?php if (have_rows('dates', $id)) : ?>
                                 <?php echo other_nice_event_dates($dates); ?>
