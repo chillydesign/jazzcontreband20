@@ -73,6 +73,12 @@
             </p>
             <hr>
           <?php endif; ?>
+          
+          <?php if($ticketing_link) : ?>
+              <h4><span class="colleft">Billetterie en ligne</span><span class="colright"><a href="<?php echo $ticketing_link; ?>" target="_blank" style="text-decoration:underline">ici</a></span></h4>
+              <hr>
+
+          <?php endif; ?>
 
           <?php if($tarif_plein_prevente OR $tarif_plein_sur_place OR $tarif_reduit_prevente OR $tarif_reduit_sur_place OR $tarif_passe_partout_jcb): ?>
 
@@ -109,11 +115,7 @@
 
           <?php endif; ?>
 
-          <?php if($ticketing_link) : ?>
-              <h4><span class="colleft">Billetterie en ligne</span><span class="colright"><a href="<?php echo $ticketing_link; ?>" target="_blank" style="text-decoration:underline">ici</a></span></h4>
-              <hr>
 
-          <?php endif; ?>
 
           <?php $latlng = get_field('venue_gmap'); ?>
           <?php if($latlng) :
