@@ -272,6 +272,13 @@ section.section.section_downloads {
         width: 60px;
         text-align: right;
       }
+
+
+      &.collrfull {
+        width: 100%;
+        display: block;
+        text-align: left;
+      }
     }
 
   }

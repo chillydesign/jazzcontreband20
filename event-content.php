@@ -220,11 +220,11 @@ global $has_image; ?>
                 <h5>TARIF(S) RÉDUIT(S)</h5>
                 <p>
                   <?php if ($tarif_reduit_prevente) : ?>
-                    <span class="colleft">Prévente (tarif normal)</span><span class="colright"><?php echo $tarif_reduit_prevente; ?></span>
+                    <span class="colleft collrfull">Prévente (tarif normal)</span><span class="colright collrfull"><?php echo $tarif_reduit_prevente; ?></span>
                   <?php endif; ?>
 
                   <?php if ($tarif_reduit_sur_place) : ?>
-                    <span class="colleft">Sur place (A + R)</span><span class="colright"><?php echo $tarif_reduit_sur_place; ?></span>
+                    <span class="colleft collrfull">Sur place (A + R)</span><span class="colright collrfull"><?php echo $tarif_reduit_sur_place; ?></span>
                   <?php endif; ?>
 
                   <?php if ($tarif_passe_partout_jcb) : ?>
