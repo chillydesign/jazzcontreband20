@@ -5,17 +5,33 @@ nav {
   position: relative;
   z-index: 100;
 
+  $menu_bar_height: 50px;
+
   a#menu_button {
     display: block;
-    background: url("../img/menu.svg") no-repeat center center;
-    background-size: 30px;
-    text-indent: -9999px;
-    height: 30px;
-    width: 30px;
-    position: absolute;
-    top: 35px;
-    right: 20px;
-    z-index: 100;
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    color: white;
+    font-weight: bold;
+    font-size: 1.6em;
+    right: 0;
+    z-index: 1000;
+    height: $menu_bar_height;
+    line-height: $menu_bar_height;
+
+    &:before {
+      content: '';
+      background: url("../img/menu.svg") no-repeat center center;
+      background-size: contain;
+      height: $menu_bar_height;
+      width: 30px;
+    }
+
 
     @media (min-width: $mobile_width) {
       display: none;
@@ -27,7 +43,7 @@ nav {
   ul#menu_navigation {
     position: fixed;
     top: 0;
-    bottom: 0;
+    bottom: $menu_bar_height;
     right: 0;
     height: auto;
     display: block;

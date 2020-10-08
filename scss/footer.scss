@@ -2,8 +2,13 @@ footer {
   background: $black;
   color: $light_grey;
   margin: 0;
-  padding: 110px 0 0px;
+  padding: 140px 0 0px;
   position: relative;
+
+
+  @media(min-width:$mobile_width) {
+    padding: 110px 0 0px;
+  }
 
   p {
     padding: 0 0 30px;

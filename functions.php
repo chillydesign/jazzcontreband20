@@ -65,8 +65,7 @@ if (function_exists('add_theme_support')) {
 \*------------------------------------*/
 
 // webfactor  navigationh
-function webfactor_nav()
-{
+function webfactor_nav() {
     wp_nav_menu(
         array(
             'theme_location'  => 'header-menu',
@@ -89,14 +88,12 @@ function webfactor_nav()
     );
 }
 
-function wf_version()
-{
-    return '0.1.2';
+function wf_version() {
+    return '0.1.3';
 }
 
 // Load webfactor  scripts (header.php)webfactor
-function webfactor_header_scripts()
-{
+function webfactor_header_scripts() {
     if ($GLOBALS['pagenow'] != 'wp-login.php' && !is_admin()) {
 
         // wp_deregister_script( 'jquery' );
@@ -113,8 +110,7 @@ function webfactor_header_scripts()
 
 
 // Load webfactor  conditional scripts
-function webfactor_conditional_scripts()
-{
+function webfactor_conditional_scripts() {
     if (is_page('pagenamehere')) {
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
@@ -122,8 +118,7 @@ function webfactor_conditional_scripts()
 }
 
 // Load webfactor  styles
-function webfactor_styles()
-{
+function webfactor_styles() {
     wp_dequeue_style('wp-block-library');
 
     wp_register_style('wf_style', get_template_directory_uri() . '/css/global.css', array(), wf_version(), 'all');
@@ -138,8 +133,7 @@ function webfactor_styles()
 }
 
 // Register webfactor  Navigation
-function register_webfactor_menu()
-{
+function register_webfactor_menu() {
     register_nav_menus(array( // Using array to specify more menus if needed
         'header-menu' => __('Header Menu', 'webfactor'), // Main Navigation
         'sidebar-menu' => __('Sidebar Menu', 'webfactor'), // Sidebar Navigation
@@ -148,27 +142,23 @@ function register_webfactor_menu()
 }
 
 // Remove the <div> surrounding the dynamic navigation to cleanup markup
-function my_wp_nav_menu_args($args = '')
-{
+function my_wp_nav_menu_args($args = '') {
     $args['container'] = false;
     return $args;
 }
 
 // Remove Injected classes, ID's and Page ID's from Navigation <li> items
-function my_css_attributes_filter($var)
-{
+function my_css_attributes_filter($var) {
     return is_array($var) ? array() : '';
 }
 
 // Remove invalid rel attribute values in the categorylist
-function remove_category_rel_from_category_list($thelist)
-{
+function remove_category_rel_from_category_list($thelist) {
     return str_replace('rel="category tag"', 'rel="tag"', $thelist);
 }
 
 // Add page slug to body class, love this - Credit: Starkers Wordpress Theme
-function add_slug_to_body_class($classes)
-{
+function add_slug_to_body_class($classes) {
     global $post;
     if (is_home()) {
         $key = array_search('blog', $classes);
@@ -210,8 +200,7 @@ if (function_exists('register_sidebar')) {
 }
 
 // Remove wp_head() injected Recent Comment styles
-function my_remove_recent_comments_style()
-{
+function my_remove_recent_comments_style() {
     global $wp_widget_factory;
     remove_action('wp_head', array(
         $wp_widget_factory->widgets['WP_Widget_Recent_Comments'],
@@ -220,8 +209,7 @@ function my_remove_recent_comments_style()
 }
 
 // Pagination for paged posts, Page 1, Page 2, Page 3, with Next and Previous Links, No plugin
-function webfactorwp_pagination()
-{
+function webfactorwp_pagination() {
     global $wp_query;
     $big = 999999999;
     echo paginate_links(array(
@@ -239,14 +227,12 @@ function webfactorwp_index($length) // Create 20 Word Callback for Index page Ex
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using webfactorwp_excerpt('webfactorwp_custom_post');
-function webfactorwp_custom_post($length)
-{
+function webfactorwp_custom_post($length) {
     return 40;
 }
 
 // Create the Custom Excerpts callback
-function webfactorwp_excerpt($length_callback = '', $more_callback = '')
-{
+function webfactorwp_excerpt($length_callback = '', $more_callback = '') {
     global $post;
     if (function_exists($length_callback)) {
         add_filter('excerpt_length', $length_callback);
@@ -262,42 +248,36 @@ function webfactorwp_excerpt($length_callback = '', $more_callback = '')
 }
 
 // Custom View Article link to Post
-function webfactor__view_article($more)
-{
+function webfactor__view_article($more) {
     global $post;
     return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'webfactor') . '</a>';
 }
 
 // Remove Admin bar
-function remove_admin_bar()
-{
+function remove_admin_bar() {
     return false;
 }
 
 // Remove 'text/css' from our enqueued stylesheet
-function webfactor_style_remove($tag)
-{
+function webfactor_style_remove($tag) {
     return preg_replace('~\s+type=["\'][^"\']++["\']~', '', $tag);
 }
 
 // Remove thumbnail width and height dimensions that prevent fluid images in the_thumbnail
-function remove_thumbnail_dimensions($html)
-{
+function remove_thumbnail_dimensions($html) {
     $html = preg_replace('/(width|height)=\"\d*\"\s/', "", $html);
     return $html;
 }
 
 // Custom Gravatar in Settings > Discussion
-function webfactorgravatar($avatar_defaults)
-{
+function webfactorgravatar($avatar_defaults) {
     $myavatar = get_template_directory_uri() . '/img/gravatar.jpg';
     $avatar_defaults[$myavatar] = "Custom Gravatar";
     return $avatar_defaults;
 }
 
 // Threaded Comments
-function enable_threaded_comments()
-{
+function enable_threaded_comments() {
     if (!is_admin()) {
         if (is_singular() and comments_open() and (get_option('thread_comments') == 1)) {
             wp_enqueue_script('comment-reply');
@@ -306,8 +286,7 @@ function enable_threaded_comments()
 }
 
 // Custom Comments Callback
-function webfactorcomments($comment, $args, $depth)
-{
+function webfactorcomments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
     extract($args, EXTR_SKIP);
 
@@ -414,8 +393,7 @@ add_shortcode('webfactor_shortcode_demo_2', 'webfactor_shortcode_demo_2'); // Pl
 \*------------------------------------*/
 
 // Shortcode Demo with Nested Capability
-function webfactor_shortcode_demo($atts, $content = null)
-{
+function webfactor_shortcode_demo($atts, $content = null) {
     return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
 }
 
@@ -428,8 +406,7 @@ function webfactor_shortcode_demo_2($atts, $content = null) // Demo Heading H2 s
 
 
 
-function chilly_nav($menu)
-{
+function chilly_nav($menu) {
     wp_nav_menu(
         array(
             'theme_location'  => $menu,
@@ -452,8 +429,7 @@ function chilly_nav($menu)
     );
 }
 
-function chilly_map($atts, $content = null)
-{
+function chilly_map($atts, $content = null) {
     $attributes = shortcode_atts(array(
         'title' => "Rue du Midi 15 Case postale 411 1020 Renens"
     ), $atts);
@@ -468,8 +444,7 @@ function chilly_map($atts, $content = null)
 add_shortcode('chilly_map', 'chilly_map');
 
 
-function disable_wp_emojicons()
-{
+function disable_wp_emojicons() {
 
     // all actions related to emojis
     remove_action('admin_print_styles', 'print_emoji_styles');
@@ -486,8 +461,7 @@ function disable_wp_emojicons()
 add_action('init', 'disable_wp_emojicons');
 
 
-function remove_json_api()
-{
+function remove_json_api() {
 
     // Remove the REST API lines from the HTML Header
     remove_action('wp_head', 'rest_output_link_wp_head', 10);
@@ -510,8 +484,7 @@ add_action('after_setup_theme', 'remove_json_api');
 
 
 
-function count_to_bootstrap_class($count)
-{
+function count_to_bootstrap_class($count) {
     if ($count == 1) {
         $class = 'col-sm-12';
     } elseif ($count == 2) {
@@ -528,8 +501,7 @@ function count_to_bootstrap_class($count)
     return $class;
 };
 
-function thumbnail_of_post_url($post_id, $size = 'large')
-{
+function thumbnail_of_post_url($post_id, $size = 'large') {
     $image_id = get_post_thumbnail_id($post_id);
     $image_url = wp_get_attachment_image_src($image_id, $size);
     $image = $image_url[0];
@@ -543,8 +515,7 @@ include('functions_create_reperage.php');
 
 
 
-function admin_default_page()
-{
+function admin_default_page() {
     $redirectto = get_home_url() . '/espace-membres';
     return $redirectto;
 }
@@ -553,8 +524,7 @@ add_filter('login_redirect', 'admin_default_page');
 
 
 add_filter('the_password_form', 'custom_password_form');
-function custom_password_form()
-{
+function custom_password_form() {
     global $post;
     $label = 'pwbox-' . (empty($post->ID) ? rand() : $post->ID);
     $o = '<form class="protected-post-form" action="' . esc_url(site_url('wp-login.php?action=postpass', 'login_post')) . '"
@@ -614,8 +584,7 @@ acf_add_options_page($args);
 
 
 
-function other_nice_event_dates($dates)
-{
+function other_nice_event_dates($dates) {
 
     if (sizeof($dates) == 0) {
         return '-';
@@ -638,8 +607,7 @@ function other_nice_event_dates($dates)
 }
 
 
-function nice_event_dates($dates)
-{
+function nice_event_dates($dates) {
 
     if (sizeof($dates) == 0) {
         return '-';
