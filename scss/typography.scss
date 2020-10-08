@@ -18,21 +18,26 @@ h2 {
   font-size: 3em;
   padding: 0 0 30px;
   font-weight: normal;
+
   @media (min-width: $mobile_width) {
     font-size: 5.5em;
   }
 }
 
-.home h2 {
+.home h2 {
   @media (min-width: $mobile_width) {
     font-size: 6.5em;
   }
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 2.5em;
   padding: 0 0 20px;
   font-weight: bold;
+
+  @media (min-width: $mobile_width) {
+    font-size: 3em;
+  }
 }
 
 h4 {
@@ -64,6 +69,7 @@ dt {
   font-size: $font_size;
   padding: 0 0 5px;
 }
+
 dt {
   font-weight: bold;
 }
@@ -73,14 +79,17 @@ a {
   border: 0;
   color: darken($brand_color, 20);
   transition: all 0.3s;
+
   &:link,
   &:active,
   &:visited {
     color: darken($brand_color, 20);
   }
+
   &:hover {
     color: $brand_color_hover;
   }
+
   &.button {
     color: white;
   }
@@ -90,6 +99,7 @@ strong,
 b {
   font-weight: bold;
 }
+
 em,
 i {
   font-style: italic;
@@ -110,6 +120,7 @@ table {
     text-align: left;
     color: $brand_color;
   }
+
   tr:nth-child(2n-1) {
     td {
       background-color: lighten($brand_color, 52);
@@ -130,13 +141,14 @@ input {
 }
 
 label.inline_label {
-    display: inline-block;
-    position: relative;
-    input[type="radio"] {
+  display: inline-block;
+  position: relative;
+
+  input[type="radio"] {
     display: inline-block;
     position: absolute;
     right: 0;
-}
+  }
 }
 
 
@@ -150,6 +162,7 @@ hr {
   &.hr_yellow {
     border-bottom-color: $yellow;
   }
+
   &.hr_black {
     border-bottom-color: $black;
   }
@@ -165,7 +178,7 @@ a h6 {
   font-size: 21px;
   background: $yellow;
   padding: 20px 40px;
-  color: black!important;
+  color: black !important;
   margin-top: 10px;
   margin-bottom: 30px;
   display: block;
@@ -173,14 +186,17 @@ a h6 {
   text-decoration: none;
   cursor: pointer;
   line-height: 1.1;
+
   @media (min-width: $mobile_width) {
     display: inline-block;
   }
+
   &:link,
   &:active,
   &:visited {
     color: white;
   }
+
   &:hover {
     color: white;
     background: darken($yellow, 10);
