@@ -14,7 +14,7 @@
 <?php $tel1 = get_field('tel_1'); ?>
 <?php $tel2 = get_field('tel_2'); ?>
 <?php $email1 = get_field('artist_email'); ?>
-<?php $email1 = get_field('artist_email'); ?>
+<?php $email2 = get_field('email'); ?>
 <?php $adresse = get_field('adresse'); ?>
 <?php $short_country = ( get_field('country') == 'Suisse') ? 'CH' : 'FR'; ?>
 
