@@ -1180,9 +1180,9 @@ input.button {
 
 div.wpcf7 {
   input {
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 9px;
-    border: 0;
+    border: solid 1px;
   }
 
   input[type="submit"] {
@@ -1221,8 +1221,16 @@ div.wpcf7 {
   }
 
   span.wpcf7-list-item-label {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
+}
+
+div.wpcf7 span.wpcf7-list-item-label {
+  font-size: 1.2em;
+  display: inline-block;
+  width: calc(100% - 40px);
+  vertical-align: top;
+  padding-left: 10px;
 }
 
 div.wpcf7-response-output {
