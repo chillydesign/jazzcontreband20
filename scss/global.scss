@@ -1234,10 +1234,11 @@ div.wpcf7 span.wpcf7-list-item-label {
 }
 
 div.wpcf7-response-output {
-  margin: 0;
+  margin: 0!important;
   padding: 10px 20px;
-  border: 2px solid #ff0000;
-  background: #ff0000;
+  border: none!important;
+  background:#000 !important;
+  color: #ffed05!important;
 }
 
 .wpcf7-response-output {
